@@ -113,7 +113,7 @@ runs:
   steps:
       - id: codeql-wrapper-init
         name: Initialize CodeQL wrapper
-        uses: kraiouchkine-ghas/codeql-init-tools@main
+        uses: kraiouchkine-ghas/codeql-init-tools@custom-tools-example
         with:
           tools: https://github.com/kraiouchkine-ghas/codeql-action/releases/download/codeql-bundle-20221105/codeql-bundle-linux64.tar.gz
           token: ${{ inputs.token }}
@@ -125,7 +125,7 @@ runs:
       - id: codeql-init
         uses: github/codeql-action/init@main
         with:
-          tools: ${{ steps.codeql-wrapper-init.outputs.codeql-tools-path }}
+          tools: ${{ steps.codeql-wrapper-init.outputs.codeql-tools-archive-path }}
           languages: ${{ inputs.languages }}
           token: ${{ inputs.token }}
           registries: ${{ inputs.registries }}
