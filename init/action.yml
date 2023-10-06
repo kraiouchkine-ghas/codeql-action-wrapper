@@ -115,7 +115,7 @@ runs:
         name: Initialize CodeQL wrapper
         uses: kraiouchkine-ghas/codeql-init-tools@main
         with:
-          tools: https://github.com/kraiouchkine-ghas/codeql-action/releases/tag/codeql-bundle-20221105
+          tools: https://github.com/kraiouchkine-ghas/codeql-action/releases/download/codeql-bundle-20221105/codeql-bundle-linux64.tar.gz
           token: ${{ inputs.token }}
           codeql-action: kraiouchkine-ghas/codeql-action
       - id: copy-config-file
