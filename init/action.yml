@@ -118,10 +118,6 @@ runs:
           tools: ${{ inputs.tools }}
           token: ${{ inputs.token }}
           codeql-action: github/codeql-action
-      - id: copy-config-file
-        name: Copy config file to workspace
-        run: cp ${{ steps.codeql-wrapper-init.outputs.codeql-tools-path }}/codeql/default-codeql-config.yml ${{ github.workspace }}/default-codeql-config.yml
-        shell: bash
       - id: codeql-init
         uses: github/codeql-action/init@main
         with:
