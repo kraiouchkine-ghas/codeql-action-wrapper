@@ -113,7 +113,7 @@ runs:
   steps:
       - id: codeql-wrapper-init
         name: Initialize CodeQL wrapper
-        uses: kraiouchkine-ghas/codeql-init-tools@custom-tools-example
+        uses: kraiouchkine-ghas/codeql-init-tools@main
         with:
           tools: ${{ inputs.tools }}
           token: ${{ inputs.token }}
